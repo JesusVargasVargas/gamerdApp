@@ -1,0 +1,24 @@
+.pagination {
+  text-align: center;
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.pagination li+li {
+  margin-left: 1rem;
+}
+
+.pagination a {
+  padding: 0.2rem 0.4rem;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+.pagination li.active{
+    color:red;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid black;
+    border-radius: 1px;
+}
