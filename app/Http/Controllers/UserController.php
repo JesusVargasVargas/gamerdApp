@@ -30,7 +30,6 @@ class UserController extends Controller
         }
         $juegosconreview = Juego::find($ids);
         
-        //dd($juegosconreview);
         return view('user.show')->with(['user' => $user, 'reviews' => $reviews, 'juegosconreview' => $juegosconreview]);
     }
 }
