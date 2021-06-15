@@ -41,8 +41,6 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        /*echo 'hola';
-        exit; */
         $review = new Review($request->all());
         $review->iduser = Auth::id();
         
