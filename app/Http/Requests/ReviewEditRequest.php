@@ -24,7 +24,7 @@ class ReviewEditRequest extends FormRequest
     public function rules()
     {
         return [
-            //'iduser'         => 'required|numeric', innecesario porque un usuario solo puede hacer una review para su propio perfil, pero podré indicarlo bien¿
+            //'iduser'         => 'required|numeric'
             'idjuego'        => 'required|numeric',
             'estado'         => 'required|in:Completado,Jugando,Abandonado,Pendiente',
             'score'          => 'nullable|numeric|max:10|min:0|regex:/^[\d]{0,2}(\.[\d]{1})?$/',
@@ -35,7 +35,7 @@ class ReviewEditRequest extends FormRequest
     
     public function attributes() {
         return [
-            'idjuego'         => 'juego', //cómo le muestro al usuario el nombre¿
+            'idjuego'         => 'juego', 
             'estado'        => 'estado',
             'score'        => 'puntuación',
             'comentario'      => 'comentario',
