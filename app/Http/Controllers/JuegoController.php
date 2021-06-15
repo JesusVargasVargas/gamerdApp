@@ -23,7 +23,7 @@ class JuegoController extends Controller
          $this-> middleware('admin', ['only' => ['create', 'edit']]);
     } */
      
-    public function index(Request $request) //hacer checkboxes en vez de enlaces para el orden¿
+    public function index(Request $request)
     {
         
         //$juegos = Juego::paginate(5);
@@ -208,36 +208,4 @@ class JuegoController extends Controller
     }
     
     
-    /*private function reduceImagen($img){
-        $img->resize(200, null, function ($constraint){ //pixeles
-            $constraint->aspectRatio();
-        }); 
-        return $img;
-    }
-    
-    
-    private function getFotos($juegos){
-        $fotos = [];
-        foreach($juegos as $juego){
-            if($juego->foto == null){
-                $fotos[$juego->id] = null;
-            } else {
-                $fotos[$juego->id] = $this->getFirstFile($juego);
-            }
-        }
-        return $fotos;
-    }
-    
-    private function getFirstFile(Juego $juego){
-        $file = null;
-        $files = $this->getFiles($juego);
-        if(isset($files[0])){
-            $file = $files[0];
-        } 
-        return $file;
-    }
-    
-    private function getFiles(Juego $juego){
-        return Storage::files('resources/img/' . $juego->id);
-    }*/
 }
